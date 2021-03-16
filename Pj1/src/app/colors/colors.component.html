@@ -1,0 +1,10 @@
+<h3> Event click </h3>
+<ul>
+    <li *ngFor="let color of colors" (click)="onSelect(color)" (mousemove)="onUpdateColor(color.name)">{{color.name}}</li>
+</ul>
+
+<p> My Name is <span [ngStyle]="{'color': color}" >{{color}}</span> </p>
+
+<app-students [colorName]="selectedColor"></app-students>
+
+<h2>{{datetime | date:"dd/MM/yyyy"}}</h2>

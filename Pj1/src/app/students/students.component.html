@@ -1,0 +1,32 @@
+
+
+<div class="text-center">
+    <h1 class="text-danger mt-5 text-uppercase">{{title}}</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-8">
+            <table class="table table-bordered">
+                <thead>
+                    <th> ID </th>
+                    <th> Name </th>
+                    <th> Age </th>
+                    <th> Gender </th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of students;">
+                        <td>{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.age}}</td>
+                        <td>{{item.gender ? "Male" : "Female"}}</td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
+    </div>
+</div>
+
+<div *ngIf="colorName">
+    <h2>{{colorName.name }}</h2>
+    <input type="text" [(ngModel)]="colorName.name">
+</div>
